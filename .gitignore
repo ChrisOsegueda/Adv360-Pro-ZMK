@@ -1,1 +1,5 @@
 /firmware/*.uf2
+
+# intellij
+/.idea
+/.idea/workspace.xml
