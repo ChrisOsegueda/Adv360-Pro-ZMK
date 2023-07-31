@@ -34,6 +34,21 @@ bindings
     , <&macro_pause_for_release>
     , <&macro_release &mo 6 &kp RSHFT>;
 };
+macro_lalt: macro_lalt{
+compatible = "zmk,behavior-macro";
+label = "macro_lalt";
+#binding-cells = <0>;
+bindings
+    = <&macro_press &mo 7 &kp LALT>
+    , <&macro_pause_for_release>
+    , <&macro_release &mo 7 &kp LALT>;
+};
+macro_not_equal: macro_not_equal{
+compatible = "zmk,behavior-macro";
+label = "macro_not_equal";
+#binding-cells = <0>;
+bindings = <&kp EXCLAMATION>, <&kp EQUAL>;
+};
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
 label = "macro_quotes";
