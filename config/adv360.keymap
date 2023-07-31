@@ -80,6 +80,13 @@
         bindings = <&kp SQT>, <&kp DQT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+    parens: left_parens_right_parens {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LEFT_PARENS_RIGHT_PARENS";
+        #binding-cells = <0>;
+        bindings = <&kp LPAR>, <&kp RPAR>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
     braces: left_brace_right_brace {
         compatible = "zmk,behavior-mod-morph";
         label = "LEFT_BRACE_RIGHT_BRACE";
