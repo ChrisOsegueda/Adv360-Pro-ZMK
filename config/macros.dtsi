@@ -2,7 +2,7 @@ macro_redo: macro_redo{
 compatible = "zmk,behavior-macro";
 label = "macro_redo";
 #binding-cells = <0>;
-bindings = <&sk LGUI>, <&sk LSHIFT>, <&kp Z>;
+bindings = <&sk LGUI>, <&kp LS(Z)>;
 };
 macro_undo: macro_undo{
 compatible = "zmk,behavior-macro";
