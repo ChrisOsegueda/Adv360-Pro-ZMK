@@ -1,1 +1,53 @@
-[]
+[
+	{
+		"names": [
+			"LG(LS(LEFT_ARROW"
+		],
+		"description": "LG(LS(LEFT_ARROW",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"LG(LS(LEFT_ARROW))"
+		],
+		"description": "LG(LS(LEFT_ARROW))",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"RG(RS(RIGHT_ARROW))"
+		],
+		"description": "RG(RS(RIGHT_ARROW))",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	}
+]
