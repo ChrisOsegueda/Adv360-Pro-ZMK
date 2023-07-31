@@ -45,6 +45,90 @@
         bindings = <&kp HASH>, <&macro_not_equal>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+    dollar: dollar_up_caret {
+        compatible = "zmk,behavior-mod-morph";
+        label = "DOLLAR_UP_CARET";
+        #binding-cells = <0>;
+        bindings = <&kp DOLLAR>, <&kp CARET>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    amper: amper_percent {
+        compatible = "zmk,behavior-mod-morph";
+        label = "AMPER_PERCENT";
+        #binding-cells = <0>;
+        bindings = <&kp AMPERSAND>, <&kp PERCENT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    lessthan: less_than_greater_than {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LESS_THAN_GREAT_THAN";
+        #binding-cells = <0>;
+        bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    equal: equal_arrow_func {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EQUAL_ARROW_FUNC";
+        #binding-cells = <0>;
+        bindings = <&kp KP_EQUAL>, <&macro_arrow_func>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    quote: single_quote_double_quote {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SINGLE_QUOTE_DOUBLE_QUOTE";
+        #binding-cells = <0>;
+        bindings = <&kp SQT>, <&kp DQT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    braces: left_brace_right_brace {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LEFT_BRACE_RIGHT_BRACE";
+        #binding-cells = <0>;
+        bindings = <&kp LBRC>, <&kp RBRC>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    brackets: left_bracket_right_bracke {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LEFT_BRACKET_RIGHT_BRACKET";
+        #binding-cells = <0>;
+        bindings = <&kp LBKT>, <&kp RBKT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    forwslash: forw_slash_star {
+        compatible = "zmk,behavior-mod-morph";
+        label = "FORW_SLASH_STAR";
+        #binding-cells = <0>;
+        bindings = <&kp FSLH>, <&kp STAR>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    period: period_underscore {
+        compatible = "zmk,behavior-mod-morph";
+        label = "PERIOD_UNDERSCORE";
+        #binding-cells = <0>;
+        bindings = <&kp PERIOD>, <&kp UNDERSCORE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    larrow: left_arrow_prev_tab {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LEFT_ARROW_PREV_TAB";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT>, <&kp LG(LS(LEFT))>;
+        mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
+    rarrow: right_arrow_next_tab {
+        compatible = "zmk,behavior-mod-morph";
+        label = "RIGHT_ARROW_NEXT_TAB";
+        #binding-cells = <0>;
+        bindings = <&kp RIGHT>, <&kp LG(LS(RIGHT))>;
+        mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
+    backspc: backspace_delete_line {
+        compatible = "zmk,behavior-mod-morph";
+        label = "BACK_DELETE_LINE";
+        #binding-cells = <0>;
+        bindings = <&kp BSPC>, <&kp LG(BSPC)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
   };
 
     keymap {
@@ -53,11 +137,11 @@
 
         default_layer {
             bindings = <
-    &kp EQUAL  &kp EXCLAMATION          &at     &hash  &kp DOLLAR  &kp AMPERSAND               &mo 3                                                                           &mo 3  &kp LESS_THAN  &kp KP_EQUAL  &kp APOSTROPHE  &kp LEFT_PARENTHESIS   &kp PLUS       &kp MINUS
+      &kp ESC  &kp EXCLAMATION          &at     &hash     &dollar         &amper               &mo 3                                                                           &mo 3      &lessthan        &equal          &quote               &parens   &kp PLUS       &kp MINUS
       &kp TAB            &kp Q        &kp W     &kp E       &kp R          &kp T               &none                                                                           &none          &kp Y         &kp U           &kp I                 &kp O      &kp P        &kp BSLH
-      &kp ESC            &kp A        &kp S     &kp D       &kp F          &kp G               &none  &macro_lgui  &macro_lctrl                    &macro_lgui  &macro_lalt    &none          &kp H         &kp J           &kp K                 &kp L   &kp SEMI  &kp LEFT_BRACE
- &macro_lshft            &kp Z        &kp X     &kp C       &kp V          &kp B                                      &kp LG(V)                  &kp LG(LS(Z))                                &kp N         &kp M       &kp COMMA               &kp DOT   &kp FSLH    &macro_rshft
-        &mo 2           &tog 1        &none  &kp LEFT   &kp RIGHT                           &kp BSPC      &kp DEL     &kp LG(C)                      &kp LG(Z)  &kp ENTER  &kp SPACE                       &kp UP        &kp DOWN      &kp LEFT_BRACKET  &kp GRAVE           &mo 2
+      &kp ENTER          &kp A        &kp S     &kp D       &kp F          &kp G               &none  &macro_lgui  &macro_lctrl                    &macro_lgui  &macro_lalt    &none          &kp H         &kp J           &kp K                 &kp L   &kp SEMI         &braces
+ &macro_lshft            &kp Z        &kp X     &kp C       &kp V          &kp B                                      &kp LG(V)                  &kp LG(LS(Z))                                &kp N         &kp M       &kp COMMA               &period &forwslash    &macro_rshft
+        &mo 2           &tog 1  &macro_lalt   &larrow     &rarrow                           &backspc      &kp DEL     &kp LG(C)                      &kp LG(Z)  &kp ENTER  &kp SPACE                       &kp UP        &kp DOWN             &brackets  &kp GRAVE           &mo 2
             >;
         };
 
@@ -97,7 +181,7 @@
  &trans  &trans  &trans                  &trans                   &trans  &trans            &trans                                                  &trans    &trans    &kp LC(LS(UP_ARROW))    &kp UP_ARROW           &trans   &trans  &trans
  &trans  &trans  &trans                  &trans                   &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &kp HOME          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
  &trans  &trans  &trans                  &trans                   &trans  &trans                            &trans                  &trans                    &trans  &kp LC(LS(DOWN_ARROW))          &trans           &trans   &trans  &trans
- &trans  &trans  &trans  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))                    &trans  &trans  &trans                  &trans  &trans  &trans                            &trans          &trans           &trans   &trans  &trans
+ &trans  &trans  &trans                  &trans                   &trans                    &trans  &trans  &trans                  &trans  &trans  &trans                            &trans          &trans           &trans   &trans  &trans
             >;
         };
 
@@ -117,7 +201,7 @@
  &trans  &trans  &trans  &trans  &trans  &trans                       &trans                                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                       &trans             &trans         &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LG(LS(V))                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans                    &kp LG(BACKSPACE)  &kp LG(BACKSPACE)      &kp LG(X)                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans                               &trans             &trans      &kp LG(X)                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
