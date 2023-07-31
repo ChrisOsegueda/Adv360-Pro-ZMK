@@ -2,25 +2,25 @@ macro_redo: macro_redo{
 compatible = "zmk,behavior-macro";
 label = "macro_redo";
 #binding-cells = <0>;
-bindings = <&sk LGUI>, <&kp LS(Z)>;
+bindings = <&kp LG(LS(Z))>;
 };
 macro_undo: macro_undo{
 compatible = "zmk,behavior-macro";
 label = "macro_undo";
 #binding-cells = <0>;
-bindings = <&sk LGUI>, <&kp Z>;
+bindings = <&kp LG(Z)>;
 };
 macro_copy: macro_copy{
 compatible = "zmk,behavior-macro";
 label = "macro_copy";
 #binding-cells = <0>;
-bindings = <&sk LGUI>, <&kp C>;
+bindings = <&kp LG(C)>;
 };
 macro_paste: macro_paste{
 compatible = "zmk,behavior-macro";
 label = "macro_paste";
 #binding-cells = <0>;
-bindings = <&sk LGUI>, <&kp V>;
+bindings = <&kp LG(V)>;
 };
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
