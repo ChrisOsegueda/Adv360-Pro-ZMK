@@ -115,18 +115,46 @@
         bindings = <&kp PERIOD>, <&kp UNDERSCORE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    larrow: left_arrow_prev_tab {
+    leftprev: left_arrow_prev_tab {
         compatible = "zmk,behavior-mod-morph";
         label = "LEFT_ARROW_PREV_TAB";
         #binding-cells = <0>;
         bindings = <&kp LEFT>, <&kp LG(LS(LBRC))>;
         mods = <(MOD_LGUI|MOD_RGUI)>;
     };
-    rarrow: right_arrow_next_tab {
+    rightnext: right_arrow_next_tab {
         compatible = "zmk,behavior-mod-morph";
         label = "RIGHT_ARROW_NEXT_TAB";
         #binding-cells = <0>;
         bindings = <&kp RIGHT>, <&kp LG(LS(RBRC))>;
+        mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
+    leftarrow: left_arrow {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LEFT_ARROW";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT>, <&kp LEFT>;
+        mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
+    rightarrow: right_arrow {
+        compatible = "zmk,behavior-mod-morph";
+        label = "RIGHT_ARROW";
+        #binding-cells = <0>;
+        bindings = <&kp RIGHT>, <&kp RIGHT>;
+        mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
+    uparrow: up_arrow {
+        compatible = "zmk,behavior-mod-morph";
+        label = "UP_ARROW";
+        #binding-cells = <0>;
+        bindings = <&kp UP>, <&kp UP>;
+        mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
+    downarrow: down_arrow {
+        compatible = "zmk,behavior-mod-morph";
+        label = "DOWN_ARROW";
+        #binding-cells = <0>;
+        bindings = <&kp DOWN>, <&kp DOWN>;
         mods = <(MOD_LGUI|MOD_RGUI)>;
     };
     backspc: backspace_delete_line {
@@ -134,6 +162,55 @@
         label = "BACK_DELETE_LINE";
         #binding-cells = <0>;
         bindings = <&kp BSPC>, <&kp LG(BSPC)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    lineup: line-up {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LINE_UP";
+        #binding-cells = <0>;
+        bindings = <&kp LA(LS(UP_ARROW))>, <&kp LA(LS(UP_ARROW))>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    linedown: line-down {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LINE_DOWN";
+        #binding-cells = <0>;
+        bindings = <&kp LA(LS(DOWN_ARROW))>, <&kp LA(LS(DOWN_ARROW))>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    methodup: method-up {
+        compatible = "zmk,behavior-mod-morph";
+        label = "METHOD_UP";
+        #binding-cells = <0>;
+        bindings = <&kp LG(LS(UP_ARROW))>, <&kp LG(LS(UP_ARROW))>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    methoddown: method-down {
+        compatible = "zmk,behavior-mod-morph";
+        label = "METHOD_DOWN";
+        #binding-cells = <0>;
+        bindings = <&kp LG(LS(DOWN_ARROW))>, <&kp LG(LS(DOWN_ARROW))>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    prevmethod: prev-method {
+        compatible = "zmk,behavior-mod-morph";
+        label = "PREV_METHOD";
+        #binding-cells = <0>;
+        bindings = <&kp LC(LS(UP_ARROW))>, <&kp LC(LS(UP_ARROW))>;
+        mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
+    nextmethod: next-method {
+        compatible = "zmk,behavior-mod-morph";
+        label = "NEXT_METHOD";
+        #binding-cells = <0>;
+        bindings = <&kp LC(LS(DOWN_ARROW))>, <&kp LC(LS(DOWN_ARROW))>;
+        mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
+    cut: cut {
+        compatible = "zmk,behavior-mod-morph";
+        label = "CUT";
+        #binding-cells = <0>;
+        bindings = <&kp LG(X)>, <&kp LG(X)>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     mo_tog: behavior_mo_tog {
@@ -152,11 +229,11 @@
 
         default_layer {
             bindings = <
-      &kp ESC  &kp EXCLAMATION          &at     &hash     &dollar         &amper               &mo 3                                                                           &mo 3      &lessthan        &equal          &quote               &parens   &kp PLUS       &kp MINUS
-      &kp TAB            &kp Q        &kp W     &kp E       &kp R          &kp T           &kp LG(K)                                                                           &none          &kp Y         &kp U           &kp I                 &kp O      &kp P        &kp BSLH
-      &kp ENTER          &kp A        &kp S     &kp D       &kp F          &kp G          &kp LG(N9)  &macro_lgui  &macro_lctrl                    &macro_lgui  &macro_lalt &kp LG(F12)         &kp H         &kp J           &kp K                 &kp L   &kp SEMI         &braces
- &macro_lshft            &kp Z        &kp X     &kp C       &kp V          &kp B                                      &kp LG(V)                  &kp LG(LS(Z))                                &kp N         &kp M       &kp COMMA               &period &forwslash    &macro_rshft
-        &mo 2      &mo_tog 1 1  &macro_lalt   &larrow     &rarrow                           &backspc &macro_lshft     &kp LG(C)                      &kp LG(Z)  &kp ENTER  &kp SPACE                       &kp UP        &kp DOWN             &brackets  &kp GRAVE           &mo 2
+      &kp ESC  &kp EXCLAMATION          &at     &hash     &dollar         &amper               &mo 3                                                                              &mo 3      &lessthan        &equal          &quote               &parens   &kp PLUS       &kp MINUS
+      &kp TAB            &kp Q        &kp W     &kp E       &kp R          &kp T           &kp LG(K)                                                                              &none          &kp Y         &kp U           &kp I                 &kp O      &kp P        &kp BSLH
+    &kp ENTER            &kp A        &kp S     &kp D       &kp F          &kp G          &kp LG(N9)  &macro_lgui  &macro_lctrl                    &macro_lgui  &macro_lalt &kp LG(F12)          &kp H         &kp J           &kp K                 &kp L   &kp SEMI         &braces
+ &macro_lshft            &kp Z        &kp X     &kp C       &kp V          &kp B                                      &kp LG(V)                  &kp LG(LS(Z))                                   &kp N         &kp M       &kp COMMA               &period &forwslash    &macro_rshft
+        &mo 2      &mo_tog 1 1  &macro_lalt &leftprev  &rightnext                           &backspc &macro_lshft     &kp LG(C)                      &kp LG(Z)    &kp ENTER   &kp SPACE                       &kp UP        &kp DOWN             &brackets  &kp GRAVE           &mo 2
             >;
         };
 
@@ -192,20 +269,20 @@
 
         layer_CMD {
             bindings = <
- &trans  &trans  &trans                  &trans                   &trans  &trans            &trans                                                  &trans    &trans                  &trans          &trans           &trans   &trans  &trans
- &trans  &trans  &trans                  &trans                   &trans  &trans            &trans                                                  &trans    &trans    &kp LC(LS(UP_ARROW))    &kp UP_ARROW           &trans   &trans  &trans
- &trans  &trans  &trans                  &trans                   &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &kp HOME          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
- &trans  &trans  &trans                  &trans                   &trans  &trans                            &trans                  &trans                    &trans  &kp LC(LS(DOWN_ARROW))          &trans           &trans   &trans  &trans
- &trans  &trans  &trans                  &trans                   &trans                    &trans  &trans  &trans                  &trans  &trans  &trans                            &trans          &trans           &trans   &trans  &trans
+ &trans  &trans  &trans                  &trans                   &trans  &trans            &trans                                                  &trans         &trans                  &trans          &trans           &trans           &trans  &trans
+ &trans  &trans  &trans                  &trans                   &trans  &trans            &trans                                                  &trans         &trans             &prevmethod        &uparrow           &trans           &trans  &trans
+ &trans  &trans  &trans                  &trans                   &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans &kp LEFT_ARROW              &leftarrow      &downarrow      &rightarrow  &kp RIGHT_ARROW  &trans
+ &trans  &trans  &trans                  &trans                   &trans  &trans                            &trans                  &trans                         &trans             &nextmethod          &trans           &trans           &trans  &trans
+ &trans  &trans  &trans                  &trans                   &trans                    &trans  &trans  &trans                  &trans  &trans  &trans                                 &trans          &trans           &trans           &trans  &trans
             >;
         };
 
         layer_CTRL {
             bindings = <
  &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans                  &trans                  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans    &kp LG(LS(UP_ARROW))    &kp LA(LS(UP_ARROW))  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans                  &trans  &kp LA(LS(DOWN_ARROW))  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &kp LG(LS(DOWN_ARROW))                  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans               &methodup                 &lineup  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans                  &trans               &linedown  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans             &methoddown                  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans                          &trans                  &trans  &trans  &trans  &trans
             >;
         };
@@ -216,7 +293,7 @@
  &trans  &trans  &trans  &trans  &trans  &trans                       &trans                                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                       &trans             &trans         &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LG(LS(V))                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans                               &trans             &trans      &kp LG(X)                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans                               &trans             &trans           &cut                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
