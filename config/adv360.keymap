@@ -230,7 +230,7 @@
         default_layer {
             bindings = <
       &kp ESC  &kp EXCLAMATION          &at     &hash     &dollar         &amper               &mo 3                                                                              &mo 3      &lessthan        &equal          &quote               &parens   &kp PLUS       &kp MINUS
-      &kp TAB            &kp Q        &kp W     &kp E       &kp R          &kp T           &kp LG(K)                                                                   &kp LG(LS(LCTL))          &kp Y         &kp U           &kp I                 &kp O      &kp P        &kp BSLH
+      &kp TAB            &kp Q        &kp W     &kp E       &kp R          &kp T           &kp LG(K)                                                                       &macro_hyper          &kp Y         &kp U           &kp I                 &kp O      &kp P        &kp BSLH
     &kp ENTER            &kp A        &kp S     &kp D       &kp F          &kp G          &kp LG(N9)  &macro_lgui  &macro_lctrl                    &macro_lgui  &macro_lalt &kp LG(F12)          &kp H         &kp J           &kp K                 &kp L   &kp SEMI         &braces
  &macro_lshft            &kp Z        &kp X     &kp C       &kp V          &kp B                                      &kp LG(V)                  &kp LG(LS(Z))                                   &kp N         &kp M       &kp COMMA               &period &forwslash    &macro_rshft
         &mo 2      &mo_tog 1 1  &macro_lalt &leftprev  &rightnext                           &backspc &macro_lshft     &kp LG(C)                      &kp LG(Z)    &kp ENTER   &kp SPACE                       &kp UP        &kp DOWN             &brackets  &kp GRAVE           &mo 2
