@@ -3,9 +3,9 @@ compatible = "zmk,behavior-macro";
 label = "macro_lgui";
 #binding-cells = <0>;
 bindings
-    = <&macro_press &mo 4 &kp LGUI>
+    = <&macro_press &mo 4 &kp LGUI &kp LWIN>
     , <&macro_pause_for_release>
-    , <&macro_release &mo 4 &kp LGUI>;
+    , <&macro_release &mo 4 &kp LGUI &kp LWIN>;
 };
 macro_lctrl: macro_lctrl{
 compatible = "zmk,behavior-macro";
