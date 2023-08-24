@@ -64,6 +64,29 @@ bindings
     , <&macro_pause_for_release>
     , <&macro_release &kp LG(LS(LCTL))>;
 };
+macro_win_shift: macro_win_shift{
+compatible = "zmk,behavior-macro";
+label = "macro_win_shift";
+#binding-cells = <0>;
+bindings
+    = <&macro_press &kp LG(LS)>
+    , <&macro_pause_for_release>
+    , <&macro_release &kp LG(LS)>;
+};
+macro_mac_profile: macro_mac_profile{
+compatible = "zmk,behavior-macro";
+label = "macro_mac_profile";
+#binding-cells = <0>;
+bindings = <&tog 0>, <&bt BT_SEL 0>;
+};
+macro_win_profile: macro_win_profile{
+compatible = "zmk,behavior-macro";
+label = "macro_win_profile";
+#binding-cells = <0>;
+bindings = <&tog 8>, <&bt BT_SEL 1>;
+};
+
+
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
 label = "macro_quotes";

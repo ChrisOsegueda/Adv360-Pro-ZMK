@@ -259,11 +259,11 @@
 
         layer_mod {
             bindings = <
-  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none                  &none   &none   &none                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none                                  &none                       &none                                       &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none                                &none   &none   &none                       &none  &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC   &none   &none   &none
+  &none  &macro_mac_profile  &macro_win_profile  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
+  &none               &none               &none         &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none   &none   &none   &none
+  &none               &none               &none         &none         &none         &none                  &none   &none   &none                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none       &none   &none   &none   &none
+  &none               &none               &none         &none         &none         &none                                  &none                       &none                                       &none       &none       &none   &none   &none   &none
+  &none               &none               &none         &none         &none                                &none   &none   &none                       &none  &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC   &none   &none   &none
             >;
         };
 
@@ -304,6 +304,16 @@
  &trans  &trans  &trans  &trans  &trans  &trans                       &trans             &trans         &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                                              &kp LG(LS(LA(V)))                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                                &trans             &trans         &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        windows_layer {
+            bindings = <
+      &kp ESC  &kp EXCLAMATION          &at     &hash     &dollar         &amper               &mo 3                                                                              &mo 3      &lessthan        &equal          &quote               &parens   &kp PLUS       &kp MINUS
+      &kp TAB            &kp Q        &kp W     &kp E       &kp R          &kp T  &kp LC(LS(&kp ESC))                                                                  &macro_win_shift          &kp Y         &kp U           &kp I                 &kp O      &kp P        &kp BSLH
+    &kp ENTER            &kp A        &kp S     &kp D       &kp F          &kp G  &kp LC(LA(&kp DEL))  &macro_lctrl &macro_lgui                    &macro_lgui  &macro_lalt &kp LG(F12)          &kp H         &kp J           &kp K                 &kp L   &kp SEMI         &braces
+ &macro_lshft            &kp Z        &kp X     &kp C       &kp V          &kp B                                      &kp LC(V)                  &kp LC(LS(Z))                                   &kp N         &kp M       &kp COMMA               &period &forwslash    &macro_rshft
+        &mo 2      &mo_tog 1 1  &macro_lalt  &kp LEFT   &kp RIGHT                            &backspc  &macro_lshft   &kp LC(C)                      &kp LC(Z)    &kp ENTER   &kp SPACE                       &kp UP        &kp DOWN             &brackets  &kp GRAVE           &mo 2
             >;
         };
 
