@@ -83,7 +83,7 @@ macro_win_profile: macro_win_profile{
 compatible = "zmk,behavior-macro";
 label = "macro_win_profile";
 #binding-cells = <0>;
-bindings = <&to 8>;
+bindings = <&tog 8>;
 };
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
