@@ -235,7 +235,7 @@
       &kp TAB            &kp Q        &kp W     &kp E       &kp R          &kp T           &kp LG(K)                                                                       &macro_hyper          &kp Y         &kp U           &kp I                 &kp O      &kp P        &kp BSLH
     &kp ENTER            &kp A        &kp S     &kp D       &kp F          &kp G          &kp LG(N9)  &macro_lgui  &macro_lctrl                    &macro_lgui  &macro_lalt &kp LG(F12)          &kp H         &kp J           &kp K                 &kp L   &kp SEMI         &braces
  &macro_lshft            &kp Z        &kp X     &kp C       &kp V          &kp B                                      &kp LG(V)                  &kp LG(LS(Z))                                   &kp N         &kp M       &kp COMMA               &period &forwslash    &macro_rshft
-        &mo 2      &mo_tog 1 1  &macro_lalt &leftprev  &rightnext                           &backspc &macro_lshft     &kp LG(C)                      &kp LG(Z)    &kp ENTER   &kp SPACE                       &kp UP        &kp DOWN             &brackets  &kp GRAVE           &mo 2
+        &mo 2      &macro_lalt        &none &leftprev  &rightnext                           &backspc  &mo_tog 1 1     &kp LG(C)                      &kp LG(Z)    &kp ENTER   &kp SPACE                       &kp UP        &kp DOWN             &brackets  &kp GRAVE           &mo 2
             >;
         };
 
@@ -313,7 +313,7 @@
             bindings = <
  &trans  &trans  &trans    &trans     &trans  &trans            &trans                                                                       &trans  &trans                  &trans                  &trans  &trans  &trans  &trans
  &trans  &trans  &trans    &trans     &trans  &trans   &kp LC(LS(ESC))                                                             &macro_win_shift  &trans                  &trans                  &trans  &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans   &kp LC(LA(DEL))  &macro_lctrl  &macro_lgui             &macro_lgui  &macro_lalt  &kp LG(F12)  &trans                  &trans                  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans    &trans     &trans  &trans   &kp LC(LA(DEL))   &macro_lgui &macro_lctrl             &macro_lgui  &macro_lalt  &kp LG(F12)  &trans                  &trans                  &trans  &trans  &trans  &trans
  &trans  &trans  &trans    &trans     &trans  &trans                                    &kp LC(V)           &kp LC(LS(Z))                            &trans                  &trans                  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &kp LEFT  &kp RIGHT                    &trans        &trans    &kp LC(C)               &kp LC(Z)       &trans       &trans                          &trans                  &trans  &trans  &trans  &trans
             >;
