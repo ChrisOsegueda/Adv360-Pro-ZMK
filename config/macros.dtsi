@@ -47,7 +47,13 @@ macro_not_equal: macro_not_equal{
 compatible = "zmk,behavior-macro";
 label = "macro_not_equal";
 #binding-cells = <0>;
-bindings = <&kp EXCLAMATION>, <&kp EQUAL>;
+bindings = <&kp EXCLAMATION>, <&kp EQUAL>, <&kp EQUAL>;
+};
+macro_expression: macro_expression{
+compatible = "zmk,behavior-macro";
+label = "macro_expression";
+#binding-cells = <0>;
+bindings = <&kp DOLLAR>, <&macro_brackets>;
 };
 macro_arrow_func: macro_arrow_func{
 compatible = "zmk,behavior-macro";
