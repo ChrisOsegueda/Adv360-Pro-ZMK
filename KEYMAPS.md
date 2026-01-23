@@ -123,11 +123,11 @@ LEFT HALF                                                          RIGHT HALF
 ```
 LEFT HALF                                                          RIGHT HALF
 ,-----------------------------------------------.                  ,-----------------------------------------------.
-| ESC  |  1   |  2   |  3   |  4   |  5   | L3  |                  | L3   |  6   |  7   |  8   |  9   |  0   | BSPC |
+| ESC  |  1   |  2   |  3   |  4   |  5   |  6  |                  |  7   |  8   |  9   |  0   |  -   |  +   | BSPC |
 |------+------+------+------+------+------+-----|                  |------+------+------+------+------+------+------|
 | TAB  |  T   |  Q   |  W   |  E   |  R   |TSKMG|                  |WIN+SH|  ~   |  ~   |  ~   |  ~   |  ~   |  ~   |
 |------+------+------+------+------+------+-----|                  |------+------+------+------+------+------+------|
-|ENTER |  G   |  A   |  S   |  D   |  F   |C+A+D|  GUI  | CTRL |   | GUI  | ALT  |  ~   |  ~   |  ~   |  ~   |  ~   |  ~   |  ~   |
+|ENTER |  G   |  A   |  S   |  D   |  F   |C+A+D|  GUI  | CTRL |   | GUI  | ALT  | WIN  |  ~   |  ~   |  ~   |  ~   |  ~   |  ~   |
 |------+------+------+------+------+------|     |-------+------|   |------+------|      |------+------+------+------+------+------|
 |SHIFT |  B   |  Z   |  X   |  C   |  V   |     | CTL+V |      |   |C+S+Z |      |      |  ~   |  ~   |  ~   |  ~   |  ~   |  ~   |
 |------+------+------+------+------'      |SPACE| SHIFT | CTL+C|   | CTL+Z|  ~   |  ~   `------+------+------+------+------+------|
@@ -136,13 +136,13 @@ LEFT HALF                                                          RIGHT HALF
 ```
 
 **Key Features for FPS:**
-- **Number row**: Plain 1-5 and 6-0 (no mod-morphs) for weapon switching
+- **Number row**: Full 0-9, -, + (no mod-morphs) for weapon switching
 - **WASD shifted right**: W is in natural finger position, T/G/B wrap to left column
 - **Left pinky**: SHIFT for sprint/crouch
 - **Modifiers**: Plain CTRL/GUI/ALT (no layer overlays for fast response)
 - **Thumb**: SPACE + SHIFT for jump/sprint combos
 - **System keys**: Task Manager and Ctrl+Alt+Del still accessible
-- **L3 (Mod layer)**: Access profile switching to exit game mode
+- **WIN (profile exit)**: Switches to Windows profile to exit game mode
 
 ---
 
