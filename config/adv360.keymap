@@ -328,11 +328,11 @@
 
         layer_GAME {
             bindings = <
-&trans  &trans       &trans    &trans      &trans         &trans            &trans                                                                       &trans        &trans        &trans          &trans               &trans  &trans  &trans
-&trans  &kp T        &kp Q     &kp W       &kp E          &kp R    &kp LC(LS(ESC))                                                             &macro_win_shift  &trans                  &trans                  &trans  &trans  &trans  &trans
-&trans  &kp G        &kp A     &kp S       &kp D          &kp F    &kp LC(LA(DEL))   &macro_lgui &macro_lctrl             &macro_lgui  &macro_lalt  &kp LG(F12)  &trans                  &trans                  &trans  &trans  &trans  &trans
-&trans  &kp B        &kp Z     &kp X       &kp C          &kp V                                     &kp LC(V)           &kp LC(LS(Z))                            &trans                  &trans                  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LEFT  &kp RIGHT                              &kp SPACE        &trans    &kp LC(C)               &kp LC(Z)       &trans       &trans                          &trans                  &trans  &trans  &trans  &trans
+&kp ESC  &kp N1       &kp N2    &kp N3      &kp N4         &kp N5            &kp N6                                                                       &trans        &trans        &trans          &trans               &trans  &trans  &trans
+&kp TAB  &kp T        &kp Q     &kp W       &kp E          &kp R    &kp LC(LS(ESC))                                                             &macro_win_shift  &trans                  &trans                  &trans  &trans  &trans  &trans
+&kp ENTER  &kp G        &kp A     &kp S       &kp D          &kp F    &kp LC(LA(DEL))   &kp LGUI    &kp LCTRL                &kp LGUI     &kp LALT  &kp LG(F12)  &trans                  &trans                  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp B        &kp Z     &kp X       &kp C          &kp V                                     &kp LC(V)           &kp LC(LS(Z))                            &trans                  &trans                  &trans  &trans  &trans  &trans
+&trans  &kp LALT  &trans  &kp LEFT  &kp RIGHT                              &kp SPACE     &kp LSHFT    &kp LC(C)               &kp LC(Z)       &trans       &trans                          &trans                  &trans  &trans  &trans  &trans
             >;
         };
     };
